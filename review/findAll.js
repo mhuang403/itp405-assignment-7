@@ -10,11 +10,11 @@ function findAll(id) {
     });
 
     connection.connect();
-    connection.query('SELECT * FROM reviews', function (error, reviews) {
+    connection.query('SELECT * FROM reviews', function(error, reviews) {
       if (error) {
         reject();
 
-      resolve.reviews([0]);
+      resolve(reviews);
     }
   });
 });

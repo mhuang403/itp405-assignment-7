@@ -4,8 +4,8 @@ var findAll = require('./review/findAll');
 var findRecord = require('./book/findRecord');
 
 app.get('/api/v1/reviews', function (request, response) {
-  findAll().then(function(review) {
-    response.json(review);
+  findAll('id').then(function(reviews) {
+    response.json(reviews);
 });
 });
 
