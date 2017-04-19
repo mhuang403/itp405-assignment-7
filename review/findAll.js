@@ -13,9 +13,9 @@ function findAll(id) {
     connection.query('SELECT * FROM reviews', function(error, reviews) {
       if (error) {
         reject();
-
-      resolve(reviews);
-    }
+      } else {
+        resolve(reviews);
+      }
   });
 });
 }
